@@ -1,96 +1,100 @@
-ft<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CredShift | Pay Debt with Crypto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f0f0f;
-    color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-  }
-.logo {
-  width: 150px;
-  margin-bottom: 1rem;
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
 
-  p {
-    font-size: 1.2rem;
-    color: #ccc;
-    max-width: 600px;
-  }
+    .logo {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
 
-  .tagline {
-    color: #00ffcc;
-    font-weight: bold;
-  }
-    .cta {
-  color: #00ffcc;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-top: 1rem;
-  transition: color 0.3s ease;
-}
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
 
-.cta:hover {
-  color: #ffffff;
-  cursor: pointer;
-}
-    button {
-  background-color: #00ffcc;
-  color: #000;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+    }
 
-button:hover {
-  background-color: #00ddaa;
-}
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    ol {
+      text-align: left;
+      margin: 0 auto;
+      padding-left: 1rem;
+      max-width: 300px;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
     input[type="email"] {
-  padding: 0.6rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin-right: 0.5rem;
-  width: 250px;
-  max-width: 80%;
-}
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      width: 250px;
+      max-width: 80%;
+    }
 
-section {
-  margin-bottom: 2rem;
-}
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-</style>
-
-<link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles.css" />
+    button:hover {
+      background-color: #00ddb3;
+    }
+  </style>
 </head>
 <body>
+  <!-- Logo -->
   <img src="credshift-logo.png" alt="CredShift logo" class="logo" />
+
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to <span class="highlight">CredShift</span></h1>
     <p>Use crypto to pay off debt — on your terms, instantly, securely.</p>
   </section>
 
+  <!-- How it Works -->
   <section id="how" class="info">
     <h2>How It Works</h2>
     <ol>
@@ -98,10 +102,7 @@ section {
       <li>Select your debt account</li>
       <li>Transfer crypto & we pay it off</li>
     </ol>
-  </section>
-
-  <section class="signup">
-    <p>Be first in line when we launch</p>
+    <p><em>Be first in line when we launch</em></p>
     <input type="email" placeholder="Your email" />
     <button>Notify Me</button>
   </section>
