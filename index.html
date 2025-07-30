@@ -104,9 +104,53 @@
       <li>Transfer crypto & we pay it off</li>
     </ol>
     <p><em>Be first in line when we launch</em></p>
-  <form action="https://formspree.io/f/mrblknvg" method="POST">
-    <input type="email" name="email" placeholder="Your email" required />
-    <button type="submit">Notify Me</button>
-  </form>
+  <!-- Email Waitlist Form -->
+<form
+  action="https://formspree.io/f/mrblknvg"
+  method="POST"
+  onsubmit="showSuccessMessage(event)"
+  style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto;"
+>
+  <label for="email" style="font-weight: bold;">Join the Waitlist</label>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="Enter your email"
+    required
+    style="padding: 10px; border: 1px solid #ccc; border-radius: 6px;"
+  />
+  <button
+    type="submit"
+    style="padding: 10px; border: none; background-color: #2f80ed; color: white; border-radius: 6px; font-weight: bold; cursor: pointer;"
+  >
+    Notify Me
+  </button>
+</form>
+
+<!-- Success message -->
+<p id="success-message" style="display:none; color: green; text-align: center; margin-top: 10px;">
+  🎉 You're on the list! We'll let you know when we launch.
+</p>
+
+<script>
+  function showSuccessMessage(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+      } else {
+        alert('Something went wrong. Try again!');
+      }
+    });
+  }
+</script>
 </body>
 </html>
