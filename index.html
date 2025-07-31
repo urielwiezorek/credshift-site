@@ -3,120 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CredShift | Pay Debt with Crypto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>CredShift</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f0f0f;
-      color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
+      padding: 0;
     }
 
-    .logo {
-      width: 150px;
-      margin-bottom: 1rem;
+    .highlight {
+      color: #00ddb3;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+    h1, h2 {
+      margin: 0 0 1rem;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #ccc;
-      max-width: 600px;
-    }
-
-    section {
       margin-bottom: 2rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-    }
-
-    ol {
-      text-align: left;
-      margin: 0 auto;
-      padding-left: 1rem;
-      max-width: 300px;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
     }
 
     input[type="email"] {
       padding: 0.5rem;
+      border-radius: 4px;
       border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      margin-right: 0.5rem;
-      width: 250px;
-      max-width: 80%;
+      margin-bottom: 1rem;
     }
 
     button {
-      background-color: #00ffcc;
-      color: #000;
+      background-color: #00ddb3;
       border: none;
       padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-top: 1rem;
+      border-radius: 4px;
+      color: #000;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
     }
 
     button:hover {
-      background-color: #00ddb3;
+      background-color: #00bfa1;
     }
   </style>
 </head>
 <body>
-  <!-- Logo -->
-  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 1.5rem;">
-  <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift logo" style="width: 160px; margin-bottom: 1rem;" />
-  <h1 style="text-align: center;">Welcome to <span class="highlight">CredShift</span></h1>
-</div>
- <body>
-  <!-- Email Waitlist Form -->
-  <section style="display: flex; justify-content: center; padding: 2rem;">
-    <form 
-      action="https://formspree.io/f/mrblknvg" 
-      method="POST" 
-      onsubmit="showSuccessMessage(event)" 
-      style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; width: 100%;"
-    >
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Your email" 
-        required 
-        style="padding: 0.8rem; font-size: 1rem; border-radius: 5px; border: none;" 
-      />
-      <button 
-        type="submit" 
-        style="padding: 0.8rem; font-size: 1rem; background-color: #00ddb3; color: white; border: none; border-radius: 5px; cursor: pointer;"
-      >
-        Notify Me
-      </button>
-    </form>
+
+  <!-- Logo + Header -->
+  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 2rem;">
+    <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift logo" style="width: 160px; margin-bottom: 1rem;" />
+    <h1 style="text-align: center;">Welcome to <span class="highlight">CredShift</span></h1>
+    <p style="text-align: center; color: #ccc;">Use crypto to pay off debt — on your terms, instantly, securely.</p>
+  </div>
+
+  <!-- Features Section -->
+  <section id="features" style="padding: 3rem 1rem; background-color: #1a1a1a;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Why CredShift?</h2>
+      <ul style="list-style: none; padding: 0; text-align: left; max-width: 600px; margin: 0 auto; color: #ccc;">
+        <li style="margin-bottom: 1rem;"><strong>🪙 Pay with Crypto:</strong> Use XRP, ETH, and more to chip away at real-world debt.</li>
+        <li style="margin-bottom: 1rem;"><strong>🚫 Zero Hidden Fees:</strong> Transparent, flat-rate pricing.</li>
+        <li style="margin-bottom: 1rem;"><strong>🔒 Secure & Private:</strong> Your data stays yours — always.</li>
+        <li style="margin-bottom: 1rem;"><strong>📉 No Credit Checks:</strong> We work with your crypto, not your credit score.</li>
+        <li style="margin-bottom: 1rem;"><strong>💼 Built on Trust:</strong> Backed by real people, not just algorithms.</li>
+      </ul>
+    </div>
   </section>
 
   <!-- How It Works Section -->
-  <section style="text-align: center; padding: 3rem 1rem; background-color: #1a1a1a;">
+  <section style="text-align: center; padding: 3rem 1rem; background-color: #121212;">
     <h2>How It Works</h2>
     <ol style="list-style: decimal; text-align: left; max-width: 500px; margin: 2rem auto; color: #ccc;">
       <li>Connect your wallet</li>
@@ -124,63 +79,35 @@
       <li>Transfer crypto & we pay it off</li>
     </ol>
   </section>
-   <script>
-  function showSuccessMessage(event) {
-    event.preventDefault();
-    const form = event.target;
-    const email = form.email.value;
-    alert(`Thanks, ${email}! You've been added to the waitlist.`);
-    form.reset();
-  }
-</script>
-</body>
+
   <!-- Email Waitlist Form -->
-<form
-  action="https://formspree.io/f/mrblknvg"
-  method="POST"
-  onsubmit="showSuccessMessage(event)"
-  style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto;"
->
-  <label for="email" style="font-weight: bold;">Join the Waitlist</label>
-  <input
-    type="email"
-    name="email"
-    id="email"
-    placeholder="Enter your email"
-    required
-    style="padding: 10px; border: 1px solid #ccc; border-radius: 6px;"
-  />
-  <button
-    type="submit"
-    style="padding: 10px; border: none; background-color: #2f80ed; color: white; border-radius: 6px; font-weight: bold; cursor: pointer;"
-  >
-    Notify Me
-  </button>
-</form>
+  <section style="display: flex; justify-content: center; padding: 3rem;">
+    <form 
+      action="https://formspree.io/f/mrblknvg" 
+      method="POST" 
+      onsubmit="showSuccessMessage(event)"
+      style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; width: 100%;"
+    >
+      <label for="email" style="text-align: left;">Join the Waitlist</label>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required 
+      />
+      <button type="submit">Notify Me</button>
+    </form>
+  </section>
 
-<!-- Success message -->
-<p id="success-message" style="display:none; color: green; text-align: center; margin-top: 10px;">
-  🎉 You're on the list! We'll let you know when we launch.
-</p>
+  <script>
+    function showSuccessMessage(event) {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.email.value;
+      alert(`Thanks, ${email}! You've been added to the waitlist.`);
+      form.reset();
+    }
+  </script>
 
-<script>
-  function showSuccessMessage(event) {
-    event.preventDefault();
-    const form = event.target;
-
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-      headers: { Accept: "application/json" }
-    }).then(response => {
-      if (response.ok) {
-        form.style.display = 'none';
-        document.getElementById('success-message').style.display = 'block';
-      } else {
-        alert('Something went wrong. Try again!');
-      }
-    });
-  }
-</script>
 </body>
 </html>
