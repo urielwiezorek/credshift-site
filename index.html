@@ -7,82 +7,98 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background-color: #121212;
+      color: #ffffff;
       margin: 0;
       padding: 0;
-      color: #333;
     }
 
     header {
-      background-color: #ffffff;
-      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 2rem 1rem;
     }
 
     .logo {
-      max-width: 150px;
-      margin-bottom: 10px;
+      width: 160px;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      margin-top: 0;
-      font-size: 2.2rem;
+      color: #00ff99;
+      font-size: 2rem;
     }
 
-    .crypto-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 20px 0;
-      font-weight: bold;
-      font-size: 1.2rem;
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
     }
 
-    .content {
+    .features {
       max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
 
-    .section-title {
+    .features h2 {
       text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
+      color: #00ff99;
     }
 
-    form {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
+    .features ul {
+      list-style: none;
+      padding: 0;
+      line-height: 2;
     }
 
-    input[type="email"] {
-      padding: 10px;
-      width: 60%;
+    .features li::before {
+      content: "✅ ";
+    }
+
+    .how-it-works {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .how-it-works h2 {
+      color: #00ff99;
+    }
+
+    .how-it-works ol {
+      list-style: decimal;
+      text-align: left;
+      max-width: 400px;
+      margin: 1rem auto;
+      line-height: 2;
+    }
+
+    .waitlist {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .waitlist input {
+      padding: 0.5rem;
+      width: 300px;
       border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin-left: 10px;
       border: none;
-      background: #333;
-      color: white;
+      margin-right: 0.5rem;
+    }
+
+    .waitlist button {
+      padding: 0.5rem 1rem;
+      border: none;
       border-radius: 5px;
+      background-color: #00ddbb;
+      color: white;
       cursor: pointer;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #f0f0f0;
+      padding: 1rem;
       font-size: 0.9rem;
-      color: #777;
+      color: #999;
     }
   </style>
 </head>
@@ -91,30 +107,36 @@
   <header>
     <img src="credshift-logo.png" alt="CredShift Logo" class="logo" />
     <h1>Welcome to CredShift</h1>
-    <div class="crypto-icons">
-      <span>BTC</span>
-      <span>ETH</span>
-      <span>XRP</span>
-    </div>
+    <p>Use crypto to pay off debt — on your terms, instantly, securely.</p>
   </header>
 
-  <div class="content">
-    <h2 class="section-title">How It Works</h2>
-    <p>CredShift helps you turn your crypto into credit-clearing power. We bridge the gap between your digital wallet and your real-world debt.</p>
-
-    <h2 class="section-title">Features</h2>
+  <section class="features">
+    <h2>Why CredShift?</h2>
     <ul>
-      <li>Connect your wallet securely</li>
-      <li>Auto-analyze debts</li>
-      <li>One-click debt repayment in crypto</li>
+      <li><strong>Pay with Crypto:</strong> Use BTC, ETH, XRP, and more to chip away at real-world debt.</li>
+      <li><strong>Zero Hidden Fees:</strong> Transparent, flat-rate pricing.</li>
+      <li><strong>Secure & Private:</strong> Your data stays yours — always.</li>
+      <li><strong>No Credit Checks:</strong> We work with your crypto, not your credit score.</li>
+      <li><strong>Built on Trust:</strong> Backed by real people, not just algorithms.</li>
     </ul>
+  </section>
 
-    <h2 class="section-title">Pre-Register Now</h2>
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Connect your wallet</li>
+      <li>Select your debt account</li>
+      <li>Transfer crypto & we pay it off</li>
+    </ol>
+  </section>
+
+  <section class="waitlist">
+    <h2>Join the Waitlist</h2>
     <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-      <input type="email" name="email" placeholder="Your email address" required />
-      <button type="submit">Submit</button>
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Notify Me</button>
     </form>
-  </div>
+  </section>
 
   <footer>
     &copy; 2025 CredShift. All rights reserved.
