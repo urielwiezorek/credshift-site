@@ -90,25 +90,56 @@
   <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift logo" style="width: 160px; margin-bottom: 1rem;" />
   <h1 style="text-align: center;">Welcome to <span class="highlight">CredShift</span></h1>
 </div>
-  <!-- Hero Section -->
-  <section class="hero">
-    <p>Use crypto to pay off debt — on your terms, instantly, securely.</p>
+ <body>
+  <!-- Header -->
+  <header style="text-align: center; padding: 3rem 1rem;">
+    <h1>Welcome to <span style="color: #00ddb3;">CredShift</span></h1>
+    <p style="font-size: 1.2rem; color: #ccc;">Use crypto to pay off debt — on your terms, instantly, securely.</p>
+  </header>
+
+  <!-- Email Waitlist Form -->
+  <section style="display: flex; justify-content: center; padding: 2rem;">
+    <form 
+      action="https://formspree.io/f/mrblknvg" 
+      method="POST" 
+      onsubmit="showSuccessMessage(event)" 
+      style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; width: 100%;"
+    >
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your email" 
+        required 
+        style="padding: 0.8rem; font-size: 1rem; border-radius: 5px; border: none;" 
+      />
+      <button 
+        type="submit" 
+        style="padding: 0.8rem; font-size: 1rem; background-color: #00ddb3; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      >
+        Notify Me
+      </button>
+    </form>
   </section>
-<!-- Features Section -->
-<section id="features" style="padding: 3rem 1rem; background-color: #f9f9f9;">
-  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Why CredShift?</h2>
-    <ul style="list-style: none; padding: 0; text-align: left;">
-      <li style="margin-bottom: 1rem;"><strong>🪙 Pay Debt with Crypto:</strong> Use XRP, ETH, and more to chip away at real-world debt.</li>
-      <li style="margin-bottom: 1rem;"><strong>🚫 Zero Hidden Fees:</strong> Transparent, flat-rate pricing.</li>
-      <li style="margin-bottom: 1rem;"><strong>🔒 Secure & Private:</strong> Your data stays yours — always.</li>
-      <li style="margin-bottom: 1rem;"><strong>📉 No Credit Checks:</strong> We work with your crypto, not your credit score.</li>
-      <li style="margin-bottom: 1rem;"><strong>💼 Built on Trust:</strong> Backed by real people, not just algorithms.</li>
-    </ul>
-  </div>
-</section>
-  <!-- How it Works -->
-  <section id="how" class="info">
+
+  <!-- How It Works Section -->
+  <section style="text-align: center; padding: 3rem 1rem; background-color: #1a1a1a;">
+    <h2>How It Works</h2>
+    <ol style="list-style: decimal; text-align: left; max-width: 500px; margin: 2rem auto; color: #ccc;">
+      <li>Connect your wallet</li>
+      <li>Select your debt account</li>
+      <li>Transfer crypto & we pay it off</li>
+    </ol>
+  </section>
+   <script>
+  function showSuccessMessage(event) {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    alert(`Thanks, ${email}! You've been added to the waitlist.`);
+    form.reset();
+  }
+</script>
+</body>
     <h2>How It Works</h2>
     <ol>
       <li>Connect your wallet</li>
