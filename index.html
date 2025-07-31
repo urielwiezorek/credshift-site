@@ -2,99 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CredShift</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #111;
       color: #fff;
-      margin: 0;
-      padding: 0;
     }
-
-    .highlight {
-      color: #00ddb3;
+    header, section {
+      padding: 2rem 1rem;
+      text-align: center;
     }
-
+    img {
+      width: 140px;
+      margin: 1rem auto;
+      display: block;
+    }
     h1, h2 {
-      margin: 0 0 1rem;
+      color: #00ddb3;
+      margin-bottom: 0.5rem;
     }
-
     p {
-      margin-bottom: 2rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
     }
-
-    input[type="email"] {
-      padding: 0.5rem;
-      border-radius: 4px;
-      border: none;
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
+    ul li {
       margin-bottom: 1rem;
+      font-size: 1rem;
     }
-
-    button {
-      background-color: #00ddb3;
+    ul li::before {
+      content: "✅ ";
+    }
+    .waitlist-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input[type="email"] {
+      padding: 0.75rem;
+      width: 100%;
       border: none;
-      padding: 0.75rem 1.5rem;
       border-radius: 4px;
-      color: #000;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.75rem 1rem;
+      background-color: #00ddb3;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
       cursor: pointer;
       font-weight: bold;
     }
-
     button:hover {
-      background-color: #00bfa1;
+      background-color: #00bba1;
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo + Header -->
-  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 2rem;">
-    <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift logo" style="width: 160px; margin-bottom: 1rem;" />
-    <h1 style="text-align: center;">Welcome to <span class="highlight">CredShift</span></h1>
-    <p style="text-align: center; color: #ccc;">Use crypto to pay off debt — on your terms, instantly, securely.</p>
-  </div>
+  <!-- Logo -->
+  <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift logo" />
 
-  <!-- Features Section -->
-  <section id="features" style="padding: 3rem 1rem; background-color: #1a1a1a;">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Why CredShift?</h2>
-      <ul style="list-style: none; padding: 0; text-align: left; max-width: 600px; margin: 0 auto; color: #ccc;">
-        <li style="margin-bottom: 1rem;"><strong>🪙 Pay with Crypto:</strong> Use XRP, ETH, and more to chip away at real-world debt.</li>
-        <li style="margin-bottom: 1rem;"><strong>🚫 Zero Hidden Fees:</strong> Transparent, flat-rate pricing.</li>
-        <li style="margin-bottom: 1rem;"><strong>🔒 Secure & Private:</strong> Your data stays yours — always.</li>
-        <li style="margin-bottom: 1rem;"><strong>📉 No Credit Checks:</strong> We work with your crypto, not your credit score.</li>
-        <li style="margin-bottom: 1rem;"><strong>💼 Built on Trust:</strong> Backed by real people, not just algorithms.</li>
-      </ul>
-    </div>
+  <!-- Hero & Why Section -->
+  <header>
+    <h1>Welcome to <span style="color: #00ddb3;">CredShift</span></h1>
+    <p>Use crypto to pay off debt — on your terms, instantly, securely.</p>
+  </header>
+
+  <section>
+    <h2>Why CredShift?</h2>
+    <ul>
+      <li><strong>Pay with Crypto:</strong> Use XRP, ETH, and more to chip away at real-world debt.</li>
+      <li><strong>Zero Hidden Fees:</strong> Transparent, flat-rate pricing.</li>
+      <li><strong>Secure & Private:</strong> Your data stays yours — always.</li>
+      <li><strong>No Credit Checks:</strong> We work with your crypto, not your credit score.</li>
+      <li><strong>Built on Trust:</strong> Backed by real people, not just algorithms.</li>
+    </ul>
   </section>
 
-  <!-- How It Works Section -->
-  <section style="text-align: center; padding: 3rem 1rem; background-color: #121212;">
+  <!-- How It Works -->
+  <section>
     <h2>How It Works</h2>
-    <ol style="list-style: decimal; text-align: left; max-width: 500px; margin: 2rem auto; color: #ccc;">
+    <ol style="text-align: left; max-width: 500px; margin: auto; color: #ccc;">
       <li>Connect your wallet</li>
       <li>Select your debt account</li>
       <li>Transfer crypto & we pay it off</li>
     </ol>
   </section>
 
-  <!-- Email Waitlist Form -->
-  <section style="display: flex; justify-content: center; padding: 3rem;">
-    <form 
-      action="https://formspree.io/f/mrblknvg" 
-      method="POST" 
-      onsubmit="showSuccessMessage(event)"
-      style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; width: 100%;"
-    >
-      <label for="email" style="text-align: left;">Join the Waitlist</label>
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Enter your email" 
-        required 
-      />
+  <!-- Waitlist Form -->
+  <section>
+    <h2>Join the Waitlist</h2>
+    <form action="https://formspree.io/f/mrblknvg" method="POST" class="waitlist-form" onsubmit="showSuccessMessage(event)">
+      <input type="email" name="email" placeholder="Enter your email" required />
       <button type="submit">Notify Me</button>
     </form>
   </section>
