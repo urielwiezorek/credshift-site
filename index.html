@@ -27,12 +27,6 @@
       margin: 0.5rem 0;
     }
 
-    .crypto-list {
-      font-size: 1rem;
-      letter-spacing: 0.2em;
-      color: #ccc;
-    }
-
     section {
       max-width: 800px;
       margin: 2rem auto;
@@ -43,6 +37,7 @@
     section.features {
       background: #1e1e20;
       border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 221, 179, 0.2);
     }
 
     h2 {
@@ -71,9 +66,10 @@
     }
 
     .how-it-works ol {
-      text-align: left;
+      text-align: center;
       margin: 0 auto 1rem;
-      padding-left: 1.25rem;
+      padding-left: 0;
+      list-style-position: inside;
       max-width: 600px;
     }
 
@@ -92,6 +88,7 @@
       border: none;
       border-radius: 5px;
       margin-right: 0.5rem;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     }
 
     button {
@@ -102,6 +99,11 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00b89f;
     }
 
     footer {
@@ -116,7 +118,6 @@
   <header>
     <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift Logo" />
     <h1>Welcome to <span style="color: #00ddb3;">CredShift</span></h1>
-    <div class="crypto-list">BTC &nbsp;&nbsp; ETH &nbsp;&nbsp; XRP</div>
   </header>
 
   <section class="features">
