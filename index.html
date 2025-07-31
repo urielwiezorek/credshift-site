@@ -2,125 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CredShift</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CredShift | Pay Off Debt with Crypto</title>
+  <link rel="icon" href="https://cryptoicons.org/api/icon/xrp/32" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #1c1c1e, #121212);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
       color: #fff;
     }
 
     header {
       text-align: center;
-      padding: 3rem 1rem 1rem 1rem;
+      padding: 3rem 1rem 1rem;
     }
 
     header img {
-      width: 160px;
+      width: 150px;
       margin-bottom: 1rem;
     }
 
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin: 0.5rem 0;
+      margin: 0;
+      color: #ffffff;
     }
 
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem 1rem;
-      text-align: center;
+    .highlight {
+      color: #00ffae;
     }
 
-    section.features {
-      background: #1e1e20;
+    .features-box {
+      background-color: #1a1a1a;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 221, 179, 0.2);
+      box-shadow: 0 0 18px 3px #00ffae55;
+      padding: 2rem;
+      max-width: 700px;
+      margin: 2rem auto;
     }
 
-    h2 {
-      font-size: 2rem;
-      color: #00ddb3;
+    .features-box h2 {
+      color: #00ffae;
       margin-bottom: 1rem;
     }
 
-    ul {
+    .features-box ul {
       list-style: none;
       padding: 0;
-      margin: 0 auto;
-      text-align: left;
-      max-width: 600px;
     }
 
-    ul li {
+    .features-box li {
       margin-bottom: 1rem;
-      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
     }
 
-    ul li::before {
-      content: "✅";
-      margin-right: 0.5rem;
-      color: #00ddb3;
+    .features-box li::before {
+      content: '✅';
+      margin-right: 0.75rem;
+    }
+
+    .how-it-works {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .how-it-works h2 {
+      color: #00ffae;
+      margin-bottom: 1rem;
     }
 
     .how-it-works ol {
-      text-align: center;
-      margin: 0 auto 1rem;
-      padding-left: 0;
-      list-style-position: inside;
+      list-style: decimal;
+      padding-left: 1.2rem;
       max-width: 600px;
-    }
-
-    .how-it-works ol li {
-      margin-bottom: 0.5rem;
-    }
-
-    form {
-      margin-top: 2rem;
-    }
-
-    input[type="email"] {
-      padding: 0.75rem;
-      width: 250px;
-      max-width: 80%;
-      border: none;
-      border-radius: 5px;
-      margin-right: 0.5rem;
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      background-color: #00ddb3;
-      color: black;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #00b89f;
+      margin: 0 auto;
+      text-align: left;
     }
 
     footer {
       text-align: center;
-      font-size: 0.85rem;
-      color: #777;
-      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      padding: 2rem 1rem 1rem;
+    }
+
+    /* Hover Effects */
+    .features-box li:hover {
+      color: #ffffff;
+      transform: scale(1.02);
+      transition: 0.2s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .features-box {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+
+      .how-it-works ol {
+        text-align: left;
+        padding-left: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift Logo" />
-    <h1>Welcome to <span style="color: #00ddb3;">CredShift</span></h1>
+    <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90" alt="CredShift Logo" />
+    <h1>Welcome to <span class="highlight">CredShift</span></h1>
   </header>
 
-  <section class="features">
+  <section class="features-box">
     <h2>Why CredShift?</h2>
     <ul>
       <li><strong>Pay with Crypto:</strong> Use XRP, ETH, BTC, and more to chip away at real-world debt.</li>
@@ -138,15 +138,11 @@
       <li>Select your debt account</li>
       <li>Transfer crypto & we pay it off</li>
     </ol>
-
-    <form action="https://formspree.io/f/mrblkvng" method="POST">
-      <input type="email" name="email" placeholder="Your email address" required />
-      <button type="submit">Join the Waitlist</button>
-    </form>
   </section>
 
   <footer>
-    © 2025 CredShift. All rights reserved.
+    &copy; 2025 CredShift. All rights reserved.
   </footer>
+
 </body>
 </html>
