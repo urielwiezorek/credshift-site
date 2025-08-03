@@ -2,185 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CredShift</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Turn Debt into Freedom" />
+  <title>CredShift – Turn Debt into Freedom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(ellipse at top, #0f0f0f, #000000);
-      color: white;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    header {
       text-align: center;
+      margin-bottom: 40px;
     }
 
-    .logo {
-      margin-top: 2rem;
+    header img {
+      width: 160px;
+      height: auto;
+      margin-bottom: 20px;
     }
 
-    .logo img {
-      width: 140px;
-      margin-bottom: 0.5rem;
-    }
-
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin: 0.5rem 0;
+      font-weight: 800;
+      margin: 0;
     }
 
-    .highlight {
-      color: #00ff99;
-    }
-
-    .crypto-list {
-      margin-top: 0.25rem;
-      font-size: 1rem;
-      letter-spacing: 0.2rem;
-      color: #ccc;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      margin: 40px 0;
     }
 
     .feature-box {
-      background: rgba(255, 255, 255, 0.05);
+      background: #222;
+      padding: 20px;
       border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 600px;
-      box-shadow: 0 0 20px #00ff99;
-    }
-
-    .feature-box h2 {
-      color: #00ff99;
-    }
-
-    .feature-box ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
-    }
-
-    .feature-box li {
-      margin: 0.75rem 0;
-      text-align: left;
-    }
-
-    .feature-box li::before {
-      content: '✅';
-      margin-right: 0.5rem;
-      color: #00ff99;
-    }
-
-    .how-it-works {
-      margin-top: 3rem;
-    }
-
-    .how-it-works h2 {
-      color: #00ff99;
-    }
-
-    .how-it-works ol {
-      list-style: decimal;
+      transition: transform 0.3s ease, background 0.3s ease;
       text-align: center;
-      max-width: 500px;
-      margin: 0 auto;
-      padding-left: 0;
     }
 
-    .how-it-works li {
-      margin: 1rem 0;
+    .feature-box:hover {
+      transform: translateY(-5px);
+      background: #2e2e2e;
     }
 
-    .email-form {
-      margin-top: 3rem;
+    h2 {
+      font-size: 2rem;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .steps {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     form {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
+      margin-top: 60px;
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
     }
 
-    input[type="email"] {
-      padding: 0.75rem;
-      border-radius: 6px;
-      border: none;
-      width: 300px;
+    form input[type="email"] {
+      width: 100%;
+      padding: 12px;
       font-size: 1rem;
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      background: #00ff99;
-      color: #000;
+      border-radius: 8px;
       border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
+      margin-bottom: 20px;
     }
 
-    button:hover {
-      background: #00cc7a;
+    form button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
- <head>
-  <style>
+
+    form button:hover {
+      background-color: #45a049;
+    }
+
     footer {
-      margin-top: 4rem;
-      color: #666;
+      margin-top: 60px;
       font-size: 0.9rem;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
-  <title>CredShift - From Debt to Freedom</title>
-  <meta name="description" content="Turn your crypto into freedom. Use XRP, ETH, BTC to pay off debt with no banks, no credit checks, and no hidden fees.">
 </head>
 <body>
-  <!-- Hero Section -->
-</div style="margin-top: 2rem;">
-  <h1>Welcome to <span class="highlight">CredShift</span></h1>
-  <div class="crypto-list">XRP &nbsp; ETH &nbsp; BTC</div>
- </div>
-  <!-- Why CredShift Section -->
-  <div class="feature-box">
-    <h2>Why CredShift?</h2>
-    <ul>
-      <li><strong>Pay with Crypto:</strong> Use XRP, ETH, BTC, and more to chip away at real-world debt.</li>
-      <li><strong>Zero Hidden Fees:</strong> Transparent, flat-rate pricing.</li>
-      <li><strong>Secure & Private:</strong> Your data stays yours — always.</li>
-      <li><strong>No Credit Checks:</strong> We work with your crypto, not your credit score.</li>
-      <li><strong>Built on Trust:</strong> Backed by real people, not just algorithms.</li>
-    </ul>
+
+  <header>
+    <img src="IMG_936E60B0-9281-4456-8921-D3EA98151936.jpeg" alt="CredShift Logo" />
+    <h1>Welcome to CredShift</h1>
+  </header>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Pay Debt with Crypto</h3>
+      <p>Use supported cryptocurrencies to eliminate traditional debt faster and smarter.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Track Progress</h3>
+      <p>Get real-time updates and see your journey from red to green with our dashboard.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Automated Payments</h3>
+      <p>Set it and forget it. We’ll handle the logistics and debt payouts for you.</p>
+    </div>
+  </section>
+
+  <h2>How It Works</h2>
+  <div class="steps">
+    <p><strong>1.</strong> Create an account and connect your debt accounts.</p>
+    <p><strong>2.</strong> Fund your CredShift wallet with crypto.</p>
+    <p><strong>3.</strong> Our system automates payments and progress tracking.</p>
+    <p><strong>4.</strong> Watch your debt melt away while you stay in control.</p>
   </div>
 
-  <!-- How It Works Section -->
-  <div class="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Connect your wallet</li>
-      <li>Select your debt account</li>
-      <li>Transfer crypto & we pay it off</li>
-    </ol>
-  </div>
-
-  <!-- Email Form -->
-  <div class="email-form">
-    <h2>Join the Waitlist</h2>
-    <form action="https://formspree.io/f/mrblkvng" method="POST" onsubmit="showSuccessMessage(event)">
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <button type="submit">Notify Me</button>
-    </form>
-  </div>
+  <form action="https://formspree.io/f/xwkgjzqz" method="POST">
+    <h3>Get Early Access</h3>
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit">Join the Waitlist</button>
+  </form>
 
   <footer>
-    <p>© 2025 CredShift. All rights reserved.</p>
+    <p>&copy; 2025 CredShift. All rights reserved.</p>
   </footer>
 
-  <script>
-    function showSuccessMessage(event) {
-      event.preventDefault();
-      const form = event.target;
-      const email = form.email.value;
-      alert(`Thanks, ${email}! You've been added to the waitlist.`);
-      form.reset();
-    }
-  </script>
 </body>
 </html>
