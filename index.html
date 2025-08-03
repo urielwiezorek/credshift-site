@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Turn Debt to Freedom with CredShift. Pay off debt using crypto like XRP, ETH, and BTC.">
-    <title>CredShift | Turn Debt to Freedom</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Turn Debt to Freedom with CredShift. Pay off debt using crypto like XRP, ETH, and BTC." />
+  <title>CredShift | Turn Debt to Freedom</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="https://raw.githubusercontent.com/urielwiezorek/credshift-site/main/646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift Logo" class="logo" />
-            <h1>Welcome to CredShift</h1>
-            <p class="tagline">Turn Debt to Freedom</p>
-        </div>
-    </header>
+  <header>
+    <div class="logo-container">
+      <img src="646d7ca2-7e68-4a9a-a506-1efa8f882a90.png" alt="CredShift Logo" class="logo" />
+      <h1>Welcome to CredShift</h1>
+      <p class="tagline">Turn Debt to Freedom</p>
+    </div>
+  </header>
 
-    <main>
-        <section class="feature-grid">
-            <div class="feature-box" onclick="toggleDetail('crypto')">
-                <h2>Pay Debt with Crypto</h2>
-                <p id="crypto-detail" class="detail-text">Click to learn more</p>
-            </div>
-            <div class="feature-box" onclick="toggleDetail('auto')">
-                <h2>Automated Payments</h2>
-                <p id="auto-detail" class="detail-text">Click to learn more</p>
-            </div>
-            <div class="feature-box" onclick="toggleDetail('growth')">
-                <h2>Grow While You Pay</h2>
-                <p id="growth-detail" class="detail-text">Click to learn more</p>
-            </div>
-        </section>
+  <main>
+    <section class="features">
+      <div class="feature-card" onclick="toggleDetail('crypto')">
+        <h2>Pay Debt with Crypto</h2>
+        <p>Click to learn more</p>
+        <div class="detail" id="crypto">We use crypto payments like XRP, ETH, and BTC to help users eliminate debt while gaining financial freedom.</div>
+      </div>
 
-        <section class="form-section">
-            <h2>Join the Waitlist</h2>
-            <form action="https://formspree.io/f/mnqegypb" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required />
-                <button type="submit">Notify Me</button>
-            </form>
-        </section>
-    </main>
+      <div class="feature-card" onclick="toggleDetail('auto')">
+        <h2>Automated Payments</h2>
+        <p>Click to learn more</p>
+        <div class="detail" id="auto">Our system automates debt payoff with recurring crypto contributions from your wallet, aligned to your goals.</div>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 CredShift. All rights reserved.</p>
-    </footer>
+      <div class="feature-card" onclick="toggleDetail('growth')">
+        <h2>Grow While You Pay</h2>
+        <p>Click to learn more</p>
+        <div class="detail" id="growth">As your crypto appreciates, we use optimized scheduling to maximize both growth and debt payoff.</div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="form-section">
+      <h2>Join the Waitlist</h2>
+      <form action="https://formspree.io/f/mnqegypb" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Notify Me</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CredShift. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
