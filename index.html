@@ -1,169 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Turn Debt into Freedom" />
-  <title>CredShift – Turn Debt into Freedom</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-    }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #0d0d0d, #1f1f1f);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+header {
+  margin-bottom: 2rem;
+}
+.logo {
+  max-width: 160px;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.feature {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 280px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+}
+.feature:hover {
+  background: #292929;
+}
+.detail {
+  display: none;
+  margin-top: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.how-it-works h2,
+.form-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.how-it-works ol {
+  list-style: decimal inside;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ccc;
+}
+.form-section form {
+  margin-top: 1rem;
+}
+input[type="email"] {
+  padding: 0.8rem;
+  width: 250px;
+  max-width: 90%;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  padding: 0.8rem 1.2rem;
+  background: #00cc99;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #00b386;
+}
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #888;
+}
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header img {
-      width: 160px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin: 0;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      width: 100%;
-      margin: 40px 0;
-    }
-
-    .feature-box {
-      background: #222;
-      padding: 20px;
-      border-radius: 12px;
-      transition: transform 0.3s ease, background 0.3s ease;
-      text-align: center;
-    }
-
-    .feature-box:hover {
-      transform: translateY(-5px);
-      background: #2e2e2e;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    .steps {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    form {
-      margin-top: 60px;
-      background: #1f1f1f;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      width: 100%;
-      max-width: 500px;
-      text-align: center;
-    }
-
-    form input[type="email"] {
-      width: 100%;
-      padding: 12px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: none;
-      margin-bottom: 20px;
-    }
-
-    form button {
-      padding: 12px 24px;
-      font-size: 1rem;
-      background-color: #4caf50;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    form button:hover {
-      background-color: #45a049;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #999;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="IMG_936E60B0-9281-4456-8921-D3EA98151936.jpeg" alt="CredShift Logo" />
-    <h1>Welcome to CredShift</h1>
-  </header>
-
-  <section class="features">
-    <div class="feature-box">
-      <h3>Pay Debt with Crypto</h3>
-      <p>Use supported cryptocurrencies to eliminate traditional debt faster and smarter.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Track Progress</h3>
-      <p>Get real-time updates and see your journey from red to green with our dashboard.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Automated Payments</h3>
-      <p>Set it and forget it. We’ll handle the logistics and debt payouts for you.</p>
-    </div>
-  </section>
-
-  <h2>How It Works</h2>
-  <div class="steps">
-    <p><strong>1.</strong> Create an account and connect your debt accounts.</p>
-    <p><strong>2.</strong> Fund your CredShift wallet with crypto.</p>
-    <p><strong>3.</strong> Our system automates payments and progress tracking.</p>
-    <p><strong>4.</strong> Watch your debt melt away while you stay in control.</p>
-  </div>
-
-  <form action="https://formspree.io/f/xwkgjzqz" method="POST">
-    <h3>Get Early Access</h3>
-    <input type="email" name="email" placeholder="Enter your email" required />
-    <button type="submit">Join the Waitlist</button>
-  </form>
-
-  <footer>
-    <p>&copy; 2025 CredShift. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  input[type="email"] {
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  button {
+    width: 90%;
+  }
+}
